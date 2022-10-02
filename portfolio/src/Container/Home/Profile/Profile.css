@@ -138,3 +138,9 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 400px){
+    .profile-options .highlighted-btn{
+        margin-left: 19ch !important;
+    }
+}
