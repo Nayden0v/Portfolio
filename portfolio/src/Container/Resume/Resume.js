@@ -14,7 +14,7 @@ export default function Resume(props) {
         return
         Animations.animations.fadeInScreen(props.id)
       }
-      const fadeInSubscription = Scroll.currentScreenFadeIn.subscribe(fadeInScreenHandler)
+      Scroll.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
     const ResumeHeading = (props) =>{
         return (
@@ -43,95 +43,53 @@ export default function Resume(props) {
         {label: "Education", logoSrc:"education.svg"},
         {label: "Work History", logoSrc: "work-history.svg"},
         {label: "Programming Skills", logoSrc: "programming-skills.svg"},
-        {label: "Projects", logoSrc: "projects.svg"},
         {label: "Interests", logoSrc: "interests.svg"}
     ];
 
     const programmingSkillDetails = [
-        {skill: "JavaScript", ratingPercentage: 80},
-        {skill: "React Js", ratingPercentage: 80},
+        {skill: "JavaScript", ratingPercentage: 70},
+        {skill: "React Js", ratingPercentage: 65},
         {skill: "React Native", ratingPercentage: 60},
         {skill: "Node JS", ratingPercentage: 50},
         {skill: "Mongo DB", ratingPercentage: 50},
-        {skill: "TypeScript", ratingPercentage: 70},
-        {skill: "CSS", ratingPercentage: 70},
+        {skill: "TypeScript", ratingPercentage: 60},
+        {skill: "CSS", ratingPercentage: 80},
         {skill: "Git", ratingPercentage: 70},
         {skill: "Jira", ratingPercentage: 60},
 
     ];
 
-    const projectDetails =[
-        {
-            title: "Personal Portfolio Website",
-            duration: {fromDate: "2020", toDate: "2021"},
-            description: "A Personal Portfolio website tp showcase all my details and projects at one place",
-            subHeading: "Technologies Used: React JS, Bootstrap",
-        },
-        {
-            title: "Simple ToDo App",
-            duration: {fromDate: "2020", toDate: "2021"},
-            description: "A Personal Portfolio website tp showcase all my details and projects at one place",
-            subHeading: "Technologies Used: React JS, CSS",
-        },
-        {
-            title: "Personal Portfolio Website",
-            duration: {fromDate: "2020", toDate: "2021"},
-            description: "A Personal Portfolio website tp showcase all my details and projects at one place",
-            subHeading: "Technologies Used: React JS, Bootstrap",
-        },
-
-    ];
 
     const resumeDetails = [
         <div className='resume-screen-container' key="education">
             <ResumeHeading
-            heading={"TU"}
-            subHeading={"Bachelor degree"}
-            fromDate={"2011"}
-            toDate={"2016"}
+            heading={"ProgressBG"}
+            subHeading={"Ceritificates in web design & coding"}
+            fromDate={"2021"}
+            toDate={"2022"}
             />
             <ResumeHeading
-            heading={"Progress"}
-            subHeading={"Bachelor degree"}
+            heading={"Technical university of Sofia"}
+            subHeading={"Bachelor degree of electrical engineering"}
             fromDate={"2011"}
             toDate={"2016"}
             />
           <ResumeHeading
-            heading={"John Atanasov"}
-            subHeading={"Bachelor degree"}
-            fromDate={"2018"}
-            toDate={"present"}
+            heading={'Sofia vocational high school of electronics "John Atanasov"' }
+            subHeading={"Speciality - Computer networks"}
+            fromDate={"2006"}
+            toDate={"2011"}
             />
         </div>,
 
         <div className='resume-screen-container' key="work-experience">
           <div className='experience-container'>
             <ResumeHeading
-            heading={"MAP"}
-            subHeading={"Bachelor degree"}
-            fromDate={"2011"}
-            toDate={"2016"}
+            heading={"MAP Marketing Research"}
+            subHeading={"Working as a survey programmer"}
+            fromDate={"2017"}
+            toDate={"present"}
             />
-            <div className='experience-description'>
-                <span className='resume-description-text'>
-                    Currently working as a survey programmer.
-                </span>
-            </div>
-
-            <div className='experience-description'>
-                <span className='resume-description-text'>
-                    -Some Description here
-                </span>
-                <br />
-                <span className='resume-description-text'>
-                    -Some Other thing
-                </span>
-                <br />
-                <span className='resume-description-text'>
-                    -Another One
-                </span>
-                <br/>
-            </div>
           </div>
         </div>,
                 <div className='resume-screen-container programming-skills-container'
@@ -150,31 +108,18 @@ export default function Resume(props) {
                 ))}    
                 </div>,
 
-                <div className='resume-screen-container' key="projects">
-                    {projectDetails.map((projectDetails, index)=>(
-                        <ResumeHeading 
-                        key={index}
-                        heading={projectDetails.title}
-                        subHeading={projectDetails.subHeading}
-                        description={projectDetails.description}
-                        fromDate={projectDetails.duration.fromDate}
-                        toDate={projectDetails.duration.toDate}
-                        />
-                    ))}
-                </div>,
-
                 <div className='resume-screen-container' key="interests">
                     <ResumeHeading 
-                    heading="Playing"
-                    description="Dota 2 and other games I like"
+                    heading="Music &amp; Movies"
+                    description="Listening some favourite songs is the best stress reliever for me. Same with watching a good movie."
                     />
                     <ResumeHeading 
-                    heading="Programming"
-                    description="JS and web sites"
+                    heading="Competitive Sports"
+                    description="I like to challenge my reflexes and improve my skills and stamina a lot, while competing in my favourite sports like football and tennis, pushing the rank and having interactive gaming sessions excites me the most."
                     />
                     <ResumeHeading 
-                    heading="Playing Tennis"
-                    description="Dota 2 and other games I like"
+                    heading="Chill in the nature"
+                    description="I love to go somewhere into the wild."
                     />
             </div>,
     ];

@@ -19,7 +19,7 @@ export default function ContactMe(props) {
         return;
         Animations.animations.fadeInScreen(props.id)
       }
-      const fadeInSubscription = Scroll.currentScreenFadeIn.subscribe(fadeInScreenHandler)
+      Scroll.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
       const [name, setName] = useState("")
       const [email, setEmail] = useState("")

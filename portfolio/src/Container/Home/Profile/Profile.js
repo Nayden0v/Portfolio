@@ -38,8 +38,6 @@ export default function Profile() {
                             <TypeAnimation 
                             repeat={Infinity}
                             sequence={[
-                                "React/React Native Dev 🌐",
-                                2000,
                                 "React Developer",
                                 2000,
                             ]}
@@ -52,7 +50,7 @@ export default function Profile() {
                 </div>
                 <div className='profile-options'> 
                     <a href="ehizcv.pdf" download='Naydenov_CV.pdf'>
-                            <button className="btn highlighted-btn">Get Resume</button>
+                            <button className="btn highlighted-btn">Download CV</button>
                     </a>      
                 </div>
             </div>
