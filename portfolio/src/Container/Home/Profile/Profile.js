@@ -49,7 +49,7 @@ export default function Profile() {
                     </span>
                 </div>
                 <div className='profile-options'> 
-                    <a href="ehizcv.pdf" download='Naydenov_CV.pdf'>
+                    <a href="Naydenov.pdf" download='Naydenov_CV.pdf'>
                             <button className="btn highlighted-btn">Download CV</button>
                     </a>      
                 </div>
